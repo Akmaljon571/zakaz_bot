@@ -31,7 +31,7 @@ const comeBack = async (chatId) => {
 
         bot.sendMessage(chatId, _var.sendCategory, {
             reply_markup: {
-                keyboard: await categoryKeyboard(),
+                keyboard: await categoryKeyboard(chatId),
                 resize_keyboard: true
             }
         })

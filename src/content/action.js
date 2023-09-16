@@ -11,4 +11,6 @@ module.exports = {
     s10: "u_gender",
     s11: "xarid",
     s12: "sub",
+    s13: "product",
+    s14: "buyurtma",
 }

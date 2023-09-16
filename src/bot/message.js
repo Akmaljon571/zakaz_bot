@@ -57,29 +57,3 @@ bot.on('message', async (msg) => {
         }
     }       
 })
-
-
-
-
-
-
-// if (text) {
-//     const category = await Category.findOne({title: "Test"})
-//     const newSub = new subCategory({
-//         title: text,
-//         category: category._id
-//     })
-//     await newSub.save();
-//     category.subCategory.push(newSub);
-//     await category.save()
-// }
-//     New SubCategory
-
-
-// if(text) {
-//     const newCategory = new Category({
-//         title: text
-//     })
-//     await newCategory.save()
-// }
-// New Category yasash

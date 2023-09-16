@@ -26,10 +26,15 @@ Yoki raqamingizni quyidagi formatda kiriting
     updateGender: "Jinsingizni o'zgartirish",
     sendUpdateName: "Ismingizni kiriting:",
     // Setting
-    buyurtma: "Buyurtma berish",
-    orderUser: "Savatchani tekshirish",
+    buyurtma: "Buyurtma berish🚔",
+    orderUser: "Savatchani tekshirish🪣",
+    noSub: "Kechirasiz bu mahsulotni turlari yoq",
     // Xarid
+    lakatsita: "Sizga yetqazib berishimiz uchun lakatsiya tashlang:",
+    sendlakatsiya: "Lakatsita jonatish",
+    // Order
     back: 'Come Back🔙',
+    add: "Karzinkezga qo'shildi",
     noSubCategory: "Kechirasiz Hozir bu catalogga tegishli mahsulotlar yoq",
     sendsubCategory: "Mahsulotlardan birini oz karzinkangizga tanlang:"
 }

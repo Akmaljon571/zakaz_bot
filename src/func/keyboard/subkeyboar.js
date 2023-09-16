@@ -1,7 +1,7 @@
 const { back } = require("../../content/var")
 
-const subKeyboard = (array, order) => {
-    const a = [order]
+const subKeyboard = (array) => {
+    const a = []
     for (let i = 1; i <= array.length; i++) {
         a.push([`${i}. ${array[i - 1]?.title}`, array[i++] ? `${i}. ${array[i - 1]?.title}` : null].filter(e => e))
     }

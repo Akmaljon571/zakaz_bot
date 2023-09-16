@@ -11,19 +11,36 @@ const xarid = async (msg) => {
     const chatId = msg.chat.id
     const text = msg.text
     const findCategory = await Category.findOne({ title: text }).populate('subCategory')
-    if (findCategory?.subCategory?.length) {
-        await actionUpdate(chatId, action.s12)
-        const user = await User.findOne({ chatId })
-        const order = await Order.findOne({ user: user._id })
-
-        bot.sendMessage(chatId, _var.sendsubCategory, {
+    if (text == _var.buyurtma) {
+        await actionUpdate(chatId, )
+        bot.sendMessage(chatId, _var.lakatsita, {
             reply_markup: {
-                keyboard: subKeyboard(findCategory.subCategory, order ? [_var.buyurtma, _var.orderUser] : []),
+                keyboard: [
+                    [{
+                        text: _var.sendlakatsiya,
+                        request_location: true
+                    }]
+                ],
                 resize_keyboard: true
             }
-        }) 
+        })
+    } else if (text == _var.orderUser) {
+
     } else {
-        bot.sendMessage(chatId, _var.noSubCategory)
+        if (findCategory?.subCategory?.length) {
+            await actionUpdate(chatId, action.s12)
+            const user = await User.findOne({ chatId })
+            const order = await Order.findOne({ user: user._id })
+
+            bot.sendMessage(chatId, _var.sendsubCategory, {
+                reply_markup: {
+                    keyboard: subKeyboard(findCategory.subCategory),
+                    resize_keyboard: true
+                }
+            }) 
+        } else {
+            bot.sendMessage(chatId, _var.noSubCategory)
+        }
     }
 }
 
