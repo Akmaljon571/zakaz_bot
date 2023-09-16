@@ -30,7 +30,7 @@ module.exports = async (msg) => {
     }
     keyboard.push([_var.buyurtma, _var.back])
     await actionUpdate(chatId, _action.s15)
-    a += `\n\nUmmumiy: ${jami} so'm`
+    a += `\n\nUmmumiy: ${summa(jami)} so'm`
     bot.sendMessage(chatId, a, { 
         parse_mode: 'Markdown',
         reply_markup: {
