@@ -35,6 +35,15 @@ const comeBack = async (chatId) => {
                 resize_keyboard: true
             }
         })
+    } else if (newUser.action == action.s15 || newUser.action == action.s14) {
+        await actionUpdate(chatId, action.s11)
+
+        bot.sendMessage(chatId, _var.sendCategory, {
+            reply_markup: {
+                keyboard: await categoryKeyboard(chatId),
+                resize_keyboard: true
+            }
+        })
     }
 }
 

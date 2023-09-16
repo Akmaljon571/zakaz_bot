@@ -19,6 +19,9 @@ const updateAge = require('./helper/setting/updateAge')
 const updatePhone = require('./helper/setting/updatePhone')
 const updateGender = require('./helper/setting/updateGender')
 const sub = require('./helper/category/sub')
+const location = require('./helper/order/location')
+const delKarzinka = require('./helper/order/delKarzinka')
+const buyurtma = require('./helper/order/buyurtma')
 
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id
@@ -38,6 +41,8 @@ bot.on('message', async (msg) => {
             await contact(msg)
         } else if (findUser.action == action.s4 && !findUser.gender) {
             await gender(msg)
+        } else if (text == _var.buyurtma && findUser?.order?.length) {
+            await buyurtma(msg)
         } else if (findUser.action == action.s5) {
             await menu(msg)
         } else if (findUser.action == action.s6) {
@@ -54,6 +59,10 @@ bot.on('message', async (msg) => {
             await xarid(msg)
         } else if (findUser.action == action.s12) {
             await sub(msg)
+        } else if (findUser.action == action.s14) {
+            await location(msg)
+        } else if (findUser.action == action.s15) {
+            await delKarzinka(msg)
         }
     }       
 })

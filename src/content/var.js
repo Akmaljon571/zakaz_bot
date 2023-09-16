@@ -30,8 +30,9 @@ Yoki raqamingizni quyidagi formatda kiriting
     orderUser: "Savatchani tekshirish🪣",
     noSub: "Kechirasiz bu mahsulotni turlari yoq",
     // Xarid
-    lakatsita: "Sizga yetqazib berishimiz uchun lakatsiya tashlang:",
-    sendlakatsiya: "Lakatsita jonatish",
+    lakatsita: `Buyurtmani yetkazib berishimiz uchun manzilni kiriting, yoki turgan joyingizni jo'nating 
+    (📍 Turgan joyimni jo'natish. tugmasini bosing)`,
+    sendlakatsiya: `📍 Turgan joyimni jo'natish`,
     // Order
     back: 'Come Back🔙',
     add: "Karzinkezga qo'shildi",

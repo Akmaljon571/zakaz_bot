@@ -6,26 +6,18 @@ const subKeyboard = require("../../../func/keyboard/subkeyboar")
 const Category = require("../../../model/category")
 const Order = require("../../../model/order")
 const User = require("../../../model/user")
+const buyurtma = require("../order/buyurtma")
+const karzinka = require("../order/karzinka")
 
 const xarid = async (msg) => {
     const chatId = msg.chat.id
     const text = msg.text
     const findCategory = await Category.findOne({ title: text }).populate('subCategory')
-    if (text == _var.buyurtma) {
-        await actionUpdate(chatId, )
-        bot.sendMessage(chatId, _var.lakatsita, {
-            reply_markup: {
-                keyboard: [
-                    [{
-                        text: _var.sendlakatsiya,
-                        request_location: true
-                    }]
-                ],
-                resize_keyboard: true
-            }
-        })
+    const user = await User.findOne({ chatId }).populate('order')
+    if (text == _var.buyurtma && user?.order?.length) {
+        await buyurtma(msg)
     } else if (text == _var.orderUser) {
-
+        await karzinka(msg)
     } else {
         if (findCategory?.subCategory?.length) {
             await actionUpdate(chatId, action.s12)

@@ -13,4 +13,5 @@ module.exports = {
     s12: "sub",
     s13: "product",
     s14: "buyurtma",
+    s15: "karzinka",
 }
