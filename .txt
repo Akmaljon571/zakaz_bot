@@ -1,0 +1,29 @@
+/start {
+    tolliq bot haqida va bazi narsalar
+    keyboard: {
+        Category: ichimliklar, oziq-ovqat, sabzavotlar
+    }
+}
+
+Category {
+    ayni Category ga tegishli subCategorylar
+}
+
+har bir category ni sub category si boladi bundan maqsad masalan ichimliklar, coca-cola, cola 0.5 list - narxi | cola 1 litr - narxi | cola 1.5 list degan productlar boladi
+masalan: sabzavotlar, kartoshka, piyoz, kartoshka 1kg - narxi | kartoshka 2kg - narxi
+category keyboard boladi, subCategory yuqorida royxat keyboard holatda, product esa yuqorida royxat va inline keyboard holatda
+
+keyboardda qaysi narsani olish korsatiladi
+
+category {
+    title,
+    production: [
+        
+    ]
+}
+
+product {
+    title: ,
+    price: ,
+    measure: ,
+}
