@@ -34,6 +34,10 @@ Yoki raqamingizni quyidagi formatda kiriting
     (📍 Turgan joyimni jo'natish. tugmasini bosing)`,
     sendlakatsiya: `📍 Turgan joyimni jo'natish`,
     // Order
+    rahmat: "Buyurtmangiz uchun rahmar ",
+    tez: "Tez orada siz bilan operatorimiz bog'lananadi.",
+    agar: "Agar buyurtmangiz kechiksa, yoki boshqa muomo ro'y bersa, bizga bu yerda - /contact_us xabar qoldiring",
+    // Finish
     back: 'Come Back🔙',
     add: "Karzinkezga qo'shildi",
     noSubCategory: "Kechirasiz Hozir bu catalogga tegishli mahsulotlar yoq",
