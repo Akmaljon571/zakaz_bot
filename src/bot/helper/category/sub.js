@@ -8,7 +8,7 @@ const SubCategory = require("../../../model/subCategory");
 
 const sub = async (msg) => {
     const chatId = msg.chat.id
-    const text = msg.text.split('. ').slice(1).join(' ')
+    const text = msg.text?.split('. ')?.slice(1)?.join(' ')
 
     const findSub = await SubCategory.findOne({ title: text }).populate('product')
     const img = `https://zadmin.neevoo.uz/static/${findSub.img}.jpg`
