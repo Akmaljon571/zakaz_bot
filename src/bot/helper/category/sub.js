@@ -11,8 +11,8 @@ const sub = async (msg) => {
     const text = msg.text?.split('. ')?.slice(1)?.join(' ')
 
     const findSub = await SubCategory.findOne({ title: text }).populate('product')
-    const img = `https://zadmin.neevoo.uz/static/${findSub.img}.jpg`
     if (findSub.product?.length) {
+        const img = `https://zadmin.neevoo.uz/static/${findSub.img}.jpg`
         let a = ''
         findSub.product.map((e, i) => a += `\n${i + 1}. Narxi: ${summa(e?.price)} so'm`)
         bot.sendPhoto(chatId, img, {
