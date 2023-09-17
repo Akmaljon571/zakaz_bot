@@ -11,8 +11,7 @@ const sub = async (msg) => {
     const text = msg.text.split('. ').slice(1).join(' ')
 
     const findSub = await SubCategory.findOne({ title: text }).populate('product')
-    // const img = `https://api.telegram.org/bot${process.env.TOKEN}/getFile?file_id=${findSub.img}`
-     
+    const img = `https://api.telegram.org/bot${process.env.TOKEN}/getFile?file_id=${findSub.img}`
     if (findSub.product?.length) {
         let a = ''
         findSub.product.map((e, i) => a += `\n${i + 1}. Narxi: ${summa(e?.price)} so'm`)
